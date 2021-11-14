@@ -10,7 +10,12 @@ int main(int argc, char *argv[])
 	
 	takeChopstick(3, 'l');
 	usleep(60000);
-	takeChopstick(3, 'r');	
+	takeChopstick(3, 'r');
+
+	while (1)
+	{
+		;
+	}
 	
 	finish();
 
