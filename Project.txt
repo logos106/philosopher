@@ -1,0 +1,54 @@
+
+1. LAMP virtual machine
+
+- Version of the image
+LAMP packaged by Bitnami 7.4.25-11  (https://bitnami.com/stack/lamp/virtual-machine)
+
+- Import the virtual machine
+Import with VMWare Player or VMWare Workstation. I am using VMWare Workstation
+
+- Log in as root
+First log in as bitname (bitnami) as it shows. 
+Then run #sudo su
+And change password using #pass command.
+
+
+2. GUI Desktop
+
+- Selected KDE 
+I went for KDE for the following reason
+
+In terms of performance, KDE Plasma has quick and smooth animations for panels and menus and uses fewer RAM compared to GNOME. 
+Applications open promptly, and stay snappy, even under load. GNOME also behaves nicely by default, but it usually uses more RAM and CPU. 
+If you have a lower spec system, GNOME might not be the right choice for you.
+(https://dev.to/bearlike/gnome-vs-kde-plasma-4cl6)
+
+- How to install KDE Plasma
+#sudo apt -y install task-kde-desktop  (Simple enough ;-)
+
+- Reboot the system
+You can log in desktop
+
+3. SDL library
+
+- Install SDL library
+#sudo apt update
+#sudo apt-get install libsdl2-2.0 
+#sudo apt-get install libsdl2-dev
+
+4. Demo program
+
+- Copy (or use git) the files into VM
+sdl_bgi_2.5.0-1_amd64.deb, dp, DiningTable.h, DiningTable.o, dp, Rice.bmp, 
+
+- Install a Debian package
+#cd {the folder}
+#dpkg -i sdl_bgi_2.5.0-1_amd64.deb
+
+- Run the demo
+#chmod 755 dp  (to make db executable) 
+#./dp
+
+A graphical window with animated graphics appeared !!!
+
+Part 1 is done.
