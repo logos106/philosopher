@@ -1,0 +1,1 @@
+gcc DiningTable.o DP.o -o dp -lSDL_bgi -lSDL2 -lpthread -lm
