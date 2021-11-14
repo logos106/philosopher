@@ -1,14 +1,10 @@
-gcc DiningTable.o DP.o -o dp -lSDL_bgi -lSDL2 -lpthread -lm
-
-# the compiler: gcc for C program, define as g++ for C++
 CC = gcc
+CFLAGS = -I. -lSDL_bgi -lSDL2 -lpthread -lm
+DEPS = DiningTable.h
+OBJ = DP.o DiningTable.o 
 
-# the build target executable:
+%.o: %.c $(DEPS)
+	$(CC) -c -o $@ $< $(CFLAGS)
 
-all: main
-
-main: nyuenc.c
-	$(CC) -o dp main.c tpool.c -lSDL_bgi -lSDL2 -lpthread -lm
-
-clean:
-	$(RM) main
+dp: $(OBJ)
+	$(CC) -o $@ $^ $(CFLAGS)
