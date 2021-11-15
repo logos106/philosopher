@@ -8,3 +8,4 @@ OBJ = DP.o DiningTable.o
 
 dp: $(OBJ)
 	$(CC) -o $@ $^ $(CFLAGS)
+
